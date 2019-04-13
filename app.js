@@ -35,7 +35,8 @@ const nextFrame = (tempo) => {
 const getNextHit = () => {
   spotifyApi.getMyCurrentPlaybackState({})
     .then((playbackState) => {
-      const progress = playbackState.body.progress_ms;
+      // Adjust for time resp took
+      const progress = playbackState.body.progress_ms + playbackState.body.timestamp - Date.now();
       spotifyApi.getAudioFeaturesForTrack(playbackState.body.item.id)
         .then((trackData) => {
           const bpm = trackData.body.tempo / EVERY;
