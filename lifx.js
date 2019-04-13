@@ -23,10 +23,8 @@ let selection = 0;
 // course of the given duration)
 module.exports = (duration) => {
   if (!light) return console.log("No light found yet...");
-  const nextColor = COLORS[selection % COLORS.length];
-  light.color(nextColor, SATURATION, LOW_BRIGHTNESS, 3500, duration / 2);
+  light.color(COLORS[selection++ % COLORS.length], SATURATION, LOW_BRIGHTNESS, 3500, duration / 2);
   timeout = setTimeout(() => {
-    light.color(nextColor, SATURATION, HIGH_BRIGHTNESS, 3500, duration / 2);
+    light.color(COLORS[selection++ % COLORS.length], SATURATION, HIGH_BRIGHTNESS, 3500, duration / 2);
   }, duration / 2);
-  selection++;
 };
