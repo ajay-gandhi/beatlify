@@ -1,0 +1,33 @@
+{
+  "name": "beatlify",
+  "version": "0.0.1",
+  "description": "Visualize your Spotify music through a Lifx bulb",
+  "main": "app.js",
+  "dependencies": {
+    "node-lifx": "^0.8.0",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajay-gandhi/beatlify.git"
+  },
+  "keywords": [
+    "lifx",
+    "bulb",
+    "smart",
+    "home",
+    "visualizer",
+    "spotify",
+    "music"
+  ],
+  "author": "Ajay Gandhi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajay-gandhi/beatlify/issues"
+  },
+  "homepage": "https://github.com/ajay-gandhi/beatlify#readme"
+}
